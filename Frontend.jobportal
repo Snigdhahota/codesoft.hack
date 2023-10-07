@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobQuest</title>
+    <style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.text {
+  font-style: initial;
+  font-size: x-large;
+  margin-top: 30%;
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.animated-title {
+  color: #222;
+  font-family: Roboto, Arial, sans-serif;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+.animated-title > div div span {
+  display: block;
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  color: #767676;
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+</style>
+</head>
+<body>
+    <div class="container">
+    <img src="https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?w=1060&t=st=1696612393~exp=1696612993~hmac=08fc6811d7e90a5ca8eace3ae3280d5ef735d1a977e2e0fc1d1b51ab18656db4" width="100%">
+       <div class="text">
+        <h1>jobQuest</h1>
+        <p><h4>is a promising journey to unlock your full career potential. <br>
+        Whether you're a recent graduate, a seasoned professional, or anywhere in between, JobQuest is your trusted companion in the world of job searching and career development</h4></p>
+       </p>
+       </div>
+    </div>
+    <div class="animated-title">
+      <div class="text-top">
+        <div>
+          <span>welcome</span>
+          <span>to</span>
+        </div>
+      </div>
+      <div class="text-bottom">
+        <div>JobQuest</div>
+      </div>
+    </div>
+    
+    
+
+    
+    <ul>
+            <li><a href="default.asp">Home</a></li>
+            <li><a href="news.asp">News</a></li>
+            <li><a href="contact.asp">Contact</a></li>
+            <li><a href="about.asp">About</a></li>
+          </ul>
+       
+            
+            
+
+
+</body>
+</html>
