@@ -3,85 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portal</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <style>
-        .div{
-	margin:15px;
+        #i{
+            padding: 120px;
+            background-repeat: no-repeat;
+            float: right;
+            background-color: deepskyblue ;
+            }
+
+        h1 {
+    font-size: 70px;
+    letter-spacing: -4px;
+    font-weight: 200;
+    color: black;
+    text-align: relative;
 }
 
-#marginbetweennavigationbarandjumbotron{
-	margin-top:60px;
-  background-color:white;
-  color:black;
-  border-radius:6px;
-  padding:20px;
-  margin-bottom:20px;
+.cssanimation, .cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
-ul{list-style-type:none;}
 
-    </style>
-    <script>
-        $( document ).ready(function() {
-  
-});
-    </script>
+.cssanimation span { display: ruby-base }
+
+.leRotateYZoomIn span { animation-name: leRotateYZoomIn }
+@keyframes leRotateYZoomIn {
+    from {
+        transform: perspective(600px) translate3d(0, -60px, -2000px) rotateY(75deg);
+        opacity: 0
+    }
+    5% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
+} 
+
+
+
+</style> 
+<link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+    rel="stylesheet">  
 </head>
-<body>
-    <script>
-        var password = "#!";
-        (function passcodeprotect() {
-           var passcode = prompt("Enter PassCode");
-           while (passcode !== password) {
-              alert("Incorrect PassCode");
-              return passcodeprotect();
-           }
-        }());
-        alert('Welcome To The Portal');
-     </script>
-     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-          <p><a href="#"class="navbar-brand">Job Portal</a></p>
-          </div>
+<body style="background-color: beige;">
     
-      <!-- End of Navigation and begining of Jumbotron -->
-    
-      <div class="container" id="marginbetweennavigationbarandjumbotron">
-        <div class="row">
-          <div class="col-xs-12">
-            
-            <h2 class="text-center text-primary" style="margin:0px;padding:0px;font-family: 'Droid Sans', sans-serif;">Search Jobs, Across all India.</h2><hr>
-    
-    
-        <form class="form-group form-inline text-center">
-         
-          <input type="text" class="form-control " placeholder="Enter Job Title,Desigination,Keywords" style="width:300px;margin:10px;">
-       
-        
-        <select class="form-control"style="width:300px;margin:10px;">
-                  <option>Select Experience</option>
-                  <option>0 Year | Fresher</option>
-                  <option>1 Year</option>
-                  <option>2 Years</option>
-                  <option>3 Years</option>
-                  <option>4 Years</option>
-                  <option>5 Year</option>
-                  <option>6 Years</option>
-                  <option>7 Years</option>
-                  <option>8 Years</option>
-                  <option>9 Years</option>
-                  <option>10 Years</option>
-                  <option>More than 10 Years</option>
-                  </select>
-       <p class="text-center">
-         <button type="submit" class="btn-primary text-center form-control"style="width:300px;">Search</button>
-          </p>
-        </form>
-              <p class="text-center text-primary">We Will Search Best Matching Jobs for You.</p>
-    
-    
-          </div>
-        </div>
-      </div>
+    <img id="i" src="job_search_portals.png">
+    <div>
+        <h1 class="cssanimation sequence leRotateYZoomIn">With US "SKY IS THE LIMIT"</h1>
+        <h1 class="cssanimation sequence leRotateYZoomIn"> checkout the Recomended jobs for you</h1>
+        <h1 class="cssanimation sequence leRotateYZoomIn">15000+job options</h1>
+         <!--<h1 class="cssanimation leRotateYZoomIn random">cssanimation</h1>
+        please uncomment if you want to see random version--></div>
+      
+
+               
+  
+      
+
+ 
+ 
+
+
+<script>
+    window.onload = function() {
+    animateSequence();
+    animateRandom();
+};
+
+function animateSequence() {
+    var a = document.getElementsByClassName('sequence');
+    for (var i = 0; i < a.length; i++) {
+        var $this = a[i];
+        var letter = $this.innerHTML;
+        letter = letter.trim();
+        var str = '';
+        var delay = 100;
+        for (l = 0; l < letter.length; l++) {
+            if (letter[l] != ' ') {
+                str += '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[l] + '</span>';
+                delay += 150;
+            } else
+                str += letter[l];
+        }
+        $this.innerHTML = str;
+    }
+}
+
+function animateRandom() {
+    var a = document.getElementsByClassName('random');
+    for (var i = 0; i < a.length; i++) {
+        var $this = a[i];
+        var letter = $this.innerHTML;
+        letter = letter.trim();
+        var delay = 70;
+        var delayArray = new Array;
+        var randLetter = new Array;
+        for (j = 0; j < letter.length; j++) {
+            while (1) {
+                var random = getRandomInt(0, (letter.length - 1));
+                if (delayArray.indexOf(random) == -1)
+                    break;
+            }
+            delayArray[j] = random;
+        }
+        for (l = 0; l < delayArray.length; l++) {
+            var str = '';
+            var index = delayArray[l];
+            if (letter[index] != ' ') {
+                str = '<span style="animation-delay:' + delay + 'ms; -moz-animation-delay:' + delay + 'ms; -webkit-animation-delay:' + delay + 'ms; ">' + letter[index] + '</span>';
+                randLetter[index] = str;
+            } else
+                randLetter[index] = letter[index];
+            delay += 80;
+        }
+        randLetter = randLetter.join("");
+        $this.innerHTML = randLetter;
+    }
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+</script>
 </body>
 </html>
